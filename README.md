@@ -28,42 +28,34 @@ x = [ x, z, θ, ẋ, ż, θ̇ ]ᵀ
 Two rotor thrusts (Newtons): **u₁** (left) and **u₂** (right).
 
 ### Nonlinear dynamics (world frame)
-Let \(u = u_1 + u_2\). Then:
+Nonlinear dynamics (world frame):
+Let u = u1 + u2.
 
-\[
-\ddot x = -\frac{u}{m}\sin\theta + \frac{F_x}{m}
-\]
-\[
-\ddot z = \frac{u}{m}\cos\theta - g + \frac{F_z}{m}
-\]
-\[
-\ddot\theta = \frac{L}{I}(u_2-u_1) + \frac{\tau_d}{I}
-\]
+ẍ = -(u/m) sin(θ) + Fx/m
+z̈ =  (u/m) cos(θ) - g + Fz/m
+θ̈ =  (L/I)(u2 - u1) + τd/I
 
 Disturbances are optional world-frame forces/torque: \((F_x, F_z, \tau_d)\).
 
 ### Controller design model (hover linearization)
-Linearized about hover: \( \theta_0=0,\ u_0=mg,\ \tau_0=0 \).  
-Control inputs for the linear design are:
+Linearized about hover: θ0 = 0, u0 = mg, τ0 = 0
 
-\[
-u_c = [\delta u,\ \delta \tau]^T
-\]
+Control input for LQR/LQI design:
+uc = [ δu, δτ ]ᵀ
 
 where:
-- \( \delta u \) = deviation in total thrust from hover
-- \( \delta \tau \) = deviation in pitch torque from hover
+- δu = deviation in total thrust from hover
+- δτ = deviation in pitch torque from hover
 
 These are mixed into rotor thrusts via the mixer:
-\[
-\delta u_1=\tfrac12\delta u-\tfrac{\delta\tau}{2L},\quad
-\delta u_2=\tfrac12\delta u+\tfrac{\delta\tau}{2L}
-\]
-and then:
-\[
-u_1 = \tfrac{mg}{2} + \delta u_1,\quad u_2 = \tfrac{mg}{2} + \delta u_2
-\]
 
+δu1 = 0.5·δu − δτ/(2L)
+δu2 = 0.5·δu + δτ/(2L)
+
+and then:
+
+u1 = (mg)/2 + δu1
+u2 = (mg)/2 + δu2
 ---
 
 ## Project layout
