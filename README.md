@@ -22,9 +22,7 @@ The code is structured like a small professional codebase: reusable package code
 ### State
 The state is:
 
-\[
-x = [\,x,\ z,\ \theta,\ \dot x,\ \dot z,\ \dot\theta\,]^T
-\]
+x = [ x, z, θ, ẋ, ż, θ̇ ]ᵀ
 
 ### Inputs (actuators)
 Two rotor thrusts (Newtons): **u₁** (left) and **u₂** (right).
