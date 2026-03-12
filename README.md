@@ -59,6 +59,15 @@ where:
 - δu = deviation in total thrust from hover
 - δτ = deviation in pitch torque from hover
 
+## Quickstart
+
+```bash
+python -m pip install -e .
+python scripts/run_hover_openloop.py
+python scripts/run_hover_lqr.py --wind none
+python scripts/run_hover_lqr.py --wind step
+python scripts/run_hover_lqi.py --wind step
+
 ## Project layout
 
 ```text
