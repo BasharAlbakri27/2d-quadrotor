@@ -70,6 +70,13 @@ where:
 - δu = deviation in total thrust from hover
 - δτ = deviation in pitch torque from hover
 
+## Results
+
+<p align="center">
+  <img src="assets/results_x_lqr_vs_lqi.png" width="600">
+  <br/>
+  <em>Wind-step disturbance rejection. LQR stabilizes but exhibits steady-state x bias; LQI eliminates the bias via integral action.</em>
+</p>
 
 
 ## Project layout
