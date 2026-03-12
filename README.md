@@ -55,7 +55,7 @@ Control input for LQR/LQI design:
 These are mixed into rotor thrusts via the mixer:
 
 <p align="center">
-  <img src="assets/linearize.png" width="650">
+  <img src="assets/mixer.png" width="650">
 </p>
 
 where:
