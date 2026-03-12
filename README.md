@@ -73,7 +73,7 @@ where:
 ## Results
 
 <p align="center">
-  <img src="assets/trajectory_comparison.png" width="600">
+  <img src="assets/trajectory_comparison.png" width="900">
   <br/>
   <em>Wind-step disturbance rejection. LQR stabilizes but exhibits steady-state x bias; LQI eliminates the bias via integral action.</em>
 </p>
