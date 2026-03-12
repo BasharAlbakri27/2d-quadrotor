@@ -19,12 +19,12 @@ python -m pip install -e .
 ```
 
 ## Quick Tests
-
+```bash
 python scripts/run_hover_openloop.py
 python scripts/run_hover_lqr.py --wind none
 python scripts/run_hover_lqr.py --wind step
 python scripts/run_hover_lqi.py --wind step
-
+```
 ## Model
 
 ### State
