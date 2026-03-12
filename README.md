@@ -75,9 +75,10 @@ where:
 <p align="center">
   <img src="assets/trajectory_comparison.png" width="900">
   <br/>
-  <em>Wind-step disturbance rejection. LQR stabilizes but exhibits steady-state x bias; LQI eliminates the bias via integral action.</em>
+  <em>Wind-step disturbance rejection: LQR (left) vs LQI (right).</em>
 </p>
 
+We regulate the vehicle to a hover reference of (x, z, θ, ẋ, ż, θ̇) = (0, 1 m, 0, 0, 0, 0). With **LQR**, the system stabilizes altitude and attitude, but a constant wind step produces a shifted equilibrium with a **steady-state lateral offset**. With **LQI** (LQR augmented with integrators on position error), the controller accumulates persistent tracking error and drives the **steady-state position error to zero**. This typically introduces a more pronounced transient path as the integral states wind up and unwind, but improves disturbance rejection under constant bias forces.
 
 ## Project layout
 
