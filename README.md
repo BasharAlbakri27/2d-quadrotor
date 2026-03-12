@@ -37,7 +37,7 @@ Nonlinear dynamics (world frame):
 Disturbances are optional world-frame forces/torque: 
 
 <p align="center">
-  <img src="assets/disturbance.png" width="500">
+  <img src="assets/disturbance.png" width="300">
 </p>
 
 ### Controller design model (hover linearization)
