@@ -13,7 +13,18 @@ This repo is a mini-project that implements an end-to-end planar (2D) quadrotor 
 The code is structured like a small professional codebase: reusable package code under `src/`, runnable demos under `scripts/`.
 
 ---
+## Quickstart
 
+```bash
+python -m pip install -e
+
+## Quick Tests
+
+python scripts/run_hover_openloop.py
+python scripts/run_hover_lqr.py --wind none
+python scripts/run_hover_lqr.py --wind step
+python scripts/run_hover_lqi.py --wind step
+ ```
 ## Model
 
 ### State
@@ -59,10 +70,7 @@ where:
 - δu = deviation in total thrust from hover
 - δτ = deviation in pitch torque from hover
 
-## Quickstart
 
-```bash
-python -m pip install -e .
 
 ## Project layout
 
@@ -82,9 +90,4 @@ scripts/
   run_hover_lqr.py
   run_hover_lqi.py
 
-## Quick Tests
 
-python scripts/run_hover_openloop.py
-python scripts/run_hover_lqr.py --wind none
-python scripts/run_hover_lqr.py --wind step
-python scripts/run_hover_lqi.py --wind step
