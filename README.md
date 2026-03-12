@@ -1,6 +1,3 @@
-# 2d-quadrotor
-2D quadrotor mini-project: nonlinear simulation + LQR hover controller, with flight-data metrics and regression tests.
-
 # 2D Quadrotor GNC (Planar) — Nonlinear RK4 Sim + LQR/LQI + Metrics & Monitors
 
 This repo is a mini-project that implements an end-to-end planar (2D) quadrotor guidance, navigation, and control (GNC) loop:
@@ -40,14 +37,14 @@ Nonlinear dynamics (world frame):
 Disturbances are optional world-frame forces/torque: 
 
 <p align="center">
-  <img src="assets/disturbance.png" width="650">
+  <img src="assets/disturbance.png" width="500">
 </p>
 
 ### Controller design model (hover linearization)
 Linearized about hover: 
 
 <p align="center">
-  <img src="assets/linearize.png" width="650">
+  <img src="assets/linearize.png" width="500">
 </p>
 
 Control input for LQR/LQI design:
