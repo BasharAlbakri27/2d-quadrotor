@@ -16,7 +16,7 @@ The code is structured like a small professional codebase: reusable package code
 ## Quickstart
 
 ```bash
-python -m pip install -e
+python -m pip install -e .
 
 ## Quick Tests
 
