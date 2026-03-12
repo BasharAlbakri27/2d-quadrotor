@@ -20,20 +20,16 @@ The code is structured like a small professional codebase: reusable package code
 ## Model
 
 ### State
-The state is:
+The state for the system is:
+![State](assets/state.png)
 
-x = [ x, z, θ, ẋ, ż, θ̇ ]ᵀ
 
 ### Inputs (actuators)
 Two rotor thrusts (Newtons): **u₁** (left) and **u₂** (right).
 
 ### Nonlinear dynamics (world frame)
 Nonlinear dynamics (world frame):
-Let u = u1 + u2.
-
-ẍ = -(u/m) sin(θ) + Fx/m
-z̈ =  (u/m) cos(θ) - g + Fz/m
-θ̈ =  (L/I)(u2 - u1) + τd/I
+![State](assets/state.png)
 
 Disturbances are optional world-frame forces/torque: \((F_x, F_z, \tau_d)\).
 
@@ -41,7 +37,6 @@ Disturbances are optional world-frame forces/torque: \((F_x, F_z, \tau_d)\).
 Linearized about hover: θ0 = 0, u0 = mg, τ0 = 0
 
 Control input for LQR/LQI design:
-uc = [ δu, δτ ]ᵀ
 
 where:
 - δu = deviation in total thrust from hover
@@ -49,14 +44,7 @@ where:
 
 These are mixed into rotor thrusts via the mixer:
 
-δu1 = 0.5·δu − δτ/(2L)
-δu2 = 0.5·δu + δτ/(2L)
-
-and then:
-
-u1 = (mg)/2 + δu1
-u2 = (mg)/2 + δu2
----
+![Mixer](assets/mixer.png)
 
 ## Project layout
 
