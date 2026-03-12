@@ -29,7 +29,7 @@ Two rotor thrusts (Newtons): **u₁** (left) and **u₂** (right).
 
 ### Nonlinear dynamics (world frame)
 Nonlinear dynamics (world frame):
-![State](assets/state.png)
+![EOM](assets/eom.png)
 
 Disturbances are optional world-frame forces/torque: \((F_x, F_z, \tau_d)\).
 
@@ -38,13 +38,13 @@ Linearized about hover: θ0 = 0, u0 = mg, τ0 = 0
 
 Control input for LQR/LQI design:
 
-where:
-- δu = deviation in total thrust from hover
-- δτ = deviation in pitch torque from hover
-
 These are mixed into rotor thrusts via the mixer:
 
 ![Mixer](assets/mixer.png)
+
+where:
+- δu = deviation in total thrust from hover
+- δτ = deviation in pitch torque from hover
 
 ## Project layout
 
