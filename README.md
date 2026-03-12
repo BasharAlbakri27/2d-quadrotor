@@ -10,13 +10,13 @@ This repo is a mini-project that implements an end-to-end planar (2D) quadrotor 
 - **Metrics** (settling time, max error, steady-state error, effort)
 - **Integrity monitors** (saturation, bounds, NaN/Inf, windup risk)
 
-The code is structured like a small professional codebase: reusable package code under `src/`, runnable demos under `scripts/`.
 
 ---
 ## Quickstart
 
 ```bash
 python -m pip install -e .
+```
 
 ## Quick Tests
 
@@ -24,7 +24,7 @@ python scripts/run_hover_openloop.py
 python scripts/run_hover_lqr.py --wind none
 python scripts/run_hover_lqr.py --wind step
 python scripts/run_hover_lqi.py --wind step
- ```
+
 ## Model
 
 ### State
