@@ -21,6 +21,7 @@ The code is structured like a small professional codebase: reusable package code
 
 ### State
 The state for the system is:
+
 ![State](assets/state.png)
 
 
@@ -29,6 +30,7 @@ Two rotor thrusts (Newtons): **u₁** (left) and **u₂** (right).
 
 ### Nonlinear dynamics (world frame)
 Nonlinear dynamics (world frame):
+
 ![EOM](assets/eom.png)
 
 Disturbances are optional world-frame forces/torque: \((F_x, F_z, \tau_d)\).
