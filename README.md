@@ -37,13 +37,17 @@ Nonlinear dynamics (world frame):
   <img src="assets/eom.png" width="650">
 </p>
 
-Disturbances are optional world-frame forces/torque: \((F_x, F_z, \tau_d)\).
+Disturbances are optional world-frame forces/torque: 
+
+<p align="center">
+  <img src="assets/disturbance.png" width="650">
+</p>
 
 ### Controller design model (hover linearization)
 Linearized about hover: 
 
 <p align="center">
-  <img src="assets/disturbance.png" width="650">
+  <img src="assets/linearize.png" width="650">
 </p>
 
 Control input for LQR/LQI design:
