@@ -63,14 +63,9 @@ where:
 
 ```bash
 python -m pip install -e .
-python scripts/run_hover_openloop.py
-python scripts/run_hover_lqr.py --wind none
-python scripts/run_hover_lqr.py --wind step
-python scripts/run_hover_lqi.py --wind step
 
 ## Project layout
 
-```text
 src/planar_quadrotor/
   params.py          # physical constants & limits
   dynamics.py        # nonlinear f(x,u) + hover linearization
@@ -86,3 +81,10 @@ scripts/
   run_hover_openloop.py
   run_hover_lqr.py
   run_hover_lqi.py
+
+## Quick Tests
+
+python scripts/run_hover_openloop.py
+python scripts/run_hover_lqr.py --wind none
+python scripts/run_hover_lqr.py --wind step
+python scripts/run_hover_lqi.py --wind step
